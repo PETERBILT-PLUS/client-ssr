@@ -33,7 +33,6 @@ function Login() {
     const onSubmit = async (values: ILogin, actions: FormikHelpers<ILogin>) => {
         try {
             const res: AxiosResponse<any, any> = await axios.post(`${SERVER}/auth/login`, values, { withCredentials: true });
-            console.log(res.data);
             
             if (res.data.success) {
                 if (res.data.superAdmin) {
