@@ -1,18 +1,20 @@
-import { Counter } from './Counter'
+// /pages/index/index.page.tsx
 
-export { Page }
+import { StrictMode } from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App'; // Import your App component
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 
-function Page() {
+// The Page Component for SSR
+const Page = () => {
   return (
-    <>
-      <h1>Welcome</h1>
-      This page is:
-      <ul>
-        <li>Rendered to HTML.</li>
-        <li>
-          Interactive. <Counter />
-        </li>
-      </ul>
-    </>
-  )
-}
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+};
+
+// Export Page component for SSR
+export { Page };
