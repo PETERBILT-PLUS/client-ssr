@@ -1,9 +1,13 @@
 {
+    "build": {
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
     "routes": [
-        {
-            "src": "/[^.]+",
-            "dest": "/",
-            "status": 200
-        }
+      {
+        "src": "/.*",
+        "dest": "/dist/server-entry.js"
+      }
     ]
-}
+  }
